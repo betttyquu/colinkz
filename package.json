@@ -1,0 +1,32 @@
+{
+  "name": "colinkz",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/betttyquu/colinkz.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/betttyquu/colinkz/issues"
+  },
+  "homepage": "https://github.com/betttyquu/colinkz#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "epilogue": "^0.7.1",
+    "express": "^4.16.4",
+    "pg": "^7.12.1",
+    "postgre-sql": "^1.18.0",
+    "sequelize": "^4.44.3",
+    "sqlite3": "^4.0.4"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.9"
+  }
+}
