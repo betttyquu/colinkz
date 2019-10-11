@@ -16,7 +16,7 @@ app.get('/', (req, res) => {
   res.send('<h1>Welcome!!</h1>');
 });
 
-app.get('/home', (req, res) => {
+app.get('/posts', (req, res) => {
     res.sendFile(path.join(__dirname, './public/home.html'));
  });
 
@@ -40,24 +40,5 @@ const PostResource = epilogue.resource({
     endpoints: ['/posts', '/posts/:id'],
 });
 
-PostResource.all.auth(function (req, res, context) {
-    return new Promise(function (resolve, reject) {
-        if (!req.isAuthenticated()) {
-            res.status(401).send({ message: "Unauthorized" });
-            resolve(context.stop);
-        } else {
-            resolve(context.continue);
-        }
-    })
-});
 
-// database.sync().then(() => {
-//     oidc.on('ready', () => {
-//         app.listen(port, () => console.log(`My Blog App listening on port ${port}!`))
-//     });
-// });
 
-// oidc.on('error', err => {
-//     // An error occurred while setting up OIDC
-//     console.log("oidc error: ", err);
-// });
